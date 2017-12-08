@@ -1,20 +1,35 @@
 package EPM;
 
+import java.util.GregorianCalendar;
+
 public class Station {
-	
+
+	final static private char[] ZEICHEN = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+			'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+
 	private String id;
 	private int target;
 	private int actual;
-	
+	private GregorianCalendar date;
+
 	public Station(String id, int target) {
-		this.id=id;
-		this.target=target;
+		this.id = id;
+		this.target = target;
+		this.actual=0;
+		this.date=null;
+	}
+
+	public static Station generateStation() {
+		String id = String.valueOf(ZEICHEN[(int) (Math.random() * 35)] + ZEICHEN[(int) (Math.random() * 35)]
+				+ ZEICHEN[(int) (Math.random() * 35)] + ZEICHEN[(int) (Math.random() * 35)]
+				+ ZEICHEN[(int) (Math.random() * 35)]);
+		return new Station(id, (int) (Math.random() * 30) + 25);
 	}
 
 	public int calcVariance() {
-		return this.actual-this.target;
+		return this.actual - this.target;
 	}
-	
+
 	public String getId() {
 		return id;
 	}
@@ -37,5 +52,13 @@ public class Station {
 
 	public void setActual(int actual) {
 		this.actual = actual;
+	}
+	
+	public GregorianCalendar getDate() {
+		return date;
+	}
+	
+	public void setDate(GregorianCalendar gc) {
+		this.date = gc;
 	}
 }
