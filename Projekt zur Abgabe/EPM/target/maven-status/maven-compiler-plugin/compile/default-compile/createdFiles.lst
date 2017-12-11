@@ -1,3 +1,5 @@
-epm\Main.class
-epm\View.class
+epm\model\CSVParser.class
 epm\ViewModel.class
+epm\Main.class
+epm\model\Station.class
+epm\View.class
