@@ -1,0 +1,164 @@
+/*JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+
+}
+.AnchorPane{
+	
+}
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black ;
+    -fx-opacity: 0.6;
+   }
+   
+.table-view {
+    -fx-base: #127554;
+   /* -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;*/
+}
+
+.table-view .column-header-background {
+    /*-fx-background-color: transparent;*/
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 14;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 50%)
+        transparent;
+    -fx-border-insets: 0 5 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.menu-bar {
+   
+}
+
+.context-menu {
+    
+}
+
+.menu-bar .label {
+    
+}
+
+.menu .left-container {
+    
+}
+
+
+.password-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+ 
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #00FF00;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #2d9328;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #80ac41;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+#bt_connexion{
+	-fx-background-color:#00FF00;
+	-fx-background-radius: 4;
+	-fx-pref-height: 30;
+	-fx-pref-width: 121;
+    -fx-background-color: #2d9328;
+
+}
+
+#bt_ajouter{
+	
+	-fx-background-color: #00FF00;
+	/*-fx-image: url("../../images/ajouter.png");*/
+}
+#bt_modifier{
+	
+	-fx-background-color: #00FF00;
+}
+#bt_archiver{
+	
+	-fx-background-color: #FF0000;
+}
+
+#bt_archiver1{
+
+    -fx-background-color: #FF0000;
+	
+}
+#bt_attribuer{
+	-fx-background-color: #00FF00;
+}
+#bt_desactiver{
+-fx-background-color: #ff2513;
+}
+#bt_actualiser{
+	-fx-background-color: #00FF00;
+}
+#bt_rechercher{
+	
+	-fx-background-color: #00FF00;
+}
