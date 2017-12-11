@@ -18,16 +18,21 @@ public class StationTest {
 		Assert.assertTrue(b.calcVariance()==0);
 		Assert.assertTrue(c.calcVariance()==-3);
 	}
-	
+	// wie kann ein genrate Station gleich als seldst geschriebene station
 	@Test
 	public void generateStationTest() throws Exception{
-		Object o = Station.generateStation();
+		Station o = Station.generateStation();
 		Assert.assertTrue(o.getClass()==a.getClass());
-		Assert.assertFalse(o == null);
-		
+		Assert.assertFalse(o == null);	
+		System.out.println("stattion");
 		Station s = Station.generateStation();
 		System.out.println(s.getId());
 		System.out.println(s.getTarget());
+	}
+	
+	@Test
+	public void StationIdTest() {
+		
 	}
 	
 	@Test

@@ -3,11 +3,12 @@ package epm.model;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 public class Station {
 
 	final static private char[] ZEICHEN = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-			'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+			'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
 	private String id;
 	private int target;
@@ -20,11 +21,10 @@ public class Station {
 		this.actual = 0;
 		this.date = "Noch kein Wert abgelesen";
 	}
-
+// id enthält immer ein Integer[0,9]+ charAlfabeth +int+ char+int und zwar von langer 7 und ne target E[0,30]+25
 	public static Station generateStation() {
-		String id = String.valueOf(ZEICHEN[(int) (Math.random() * 35)] + ZEICHEN[(int) (Math.random() * 35)]
-				+ ZEICHEN[(int) (Math.random() * 35)] + ZEICHEN[(int) (Math.random() * 35)]
-				+ ZEICHEN[(int) (Math.random() * 35)]);
+		String id = ZEICHEN[(int) (Math.random() * 25)] + String.valueOf((int) (Math.random() * 9 )) + ZEICHEN[(int) (Math.random() * 25)] 
+				+  String.valueOf((int) (Math.random() * 9 )) + ZEICHEN[(int) (Math.random() * 25)] + String.valueOf((int) (Math.random() * 9 )) + ZEICHEN[(int) (Math.random() * 25)];
 		return new Station(id, (int) (Math.random() * 30) + 25);
 	}
 
