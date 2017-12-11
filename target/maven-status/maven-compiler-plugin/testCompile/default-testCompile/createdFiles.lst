@@ -1,1 +1,3 @@
-EPM\AppTest.class
+test_mock\Station.class
+EPM\steps\StationStep.class
+EPM\StationTest.class

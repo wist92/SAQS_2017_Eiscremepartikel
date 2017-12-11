@@ -6,6 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -42,20 +47,41 @@ class CSVParser {
 		inputStream.close();
 		return result;
 	}
+	
+	/*
+	 * */
 
 	public void write(ArrayList<Station> list) throws IOException {
 		PrintWriter out;
-		Station s;
+		Station s;		
+		BufferedWriter bw = null;
+		FileWriter fw = null;
 		for (int i = 0; i < list.size(); i++) {
 			s = list.get(i);
 			String output = s.getId() + this.separator + s.getTarget();
 			if (s.getActual() != 0) {
 				output = output + this.separator + s.getActual() + this.separator + s.getDate();
 			}
-
-			out = new PrintWriter(new BufferedWriter(new FileWriter(this.pathToFile, true)));
-			out.println(output);
-
+			
+			CSVParser parser = new CSVParser("Stations.csv", ";");				
+			ArrayList<Station> copylist = parser.read();
+			if (copylist.isEmpty()) {
+				System.out.println("leere file");
+				fw = new FileWriter(this.pathToFile, true);
+				bw = new BufferedWriter(fw);				
+				bw.write(output);
+			}
+			else {
+				System.out.println("conten was");
+				copylist.add(s);
+				fw = new FileWriter(this.pathToFile, true);
+				bw = new BufferedWriter(fw);
+				bw.newLine();
+				bw.write(output);
+				
+			}		
+			bw.close();
+			fw.close();
 		}
 	}
 

@@ -19,7 +19,7 @@ public class ViewModel {
 			@Override
 			public void run() {
 				// Station hinzufügen
-				notifyViews(new GUIEvent(this, "Test"));
+				notifyViews(new GUIEvent(this, "Romeo"));
 			}
 		}, 0, 500);
 	}
