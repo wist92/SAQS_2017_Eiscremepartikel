@@ -1,4 +1,5 @@
 epm\TestSuite.class
 epm\model\StationTest.class
+epm\TestGui.class
 epm\model\CSVParserTest.class
 epm\ViewModelTest.class
