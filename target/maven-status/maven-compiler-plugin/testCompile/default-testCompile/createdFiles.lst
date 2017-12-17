@@ -1,4 +1,6 @@
-epm\TestSuite.class
 epm\model\StationTest.class
-epm\model\CSVParserTest.class
+epm\ViewClassicTest.class
 epm\ViewModelTest.class
+epm\TestFxBase.class
+epm\TestSuite.class
+epm\model\CSVParserTest.class
