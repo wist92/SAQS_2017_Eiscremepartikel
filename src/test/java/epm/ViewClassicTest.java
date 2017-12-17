@@ -1,11 +1,15 @@
 package epm;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.testfx.api.FxRobotException;
 
 import de.saxsys.mvvmfx.utils.itemlist.SelectableItemList;
 import de.saxsys.mvvmfx.utils.itemlist.SelectableStringList;
+import javafx.scene.control.TextField;
 
 public class ViewClassicTest extends TestFxBase {
 
@@ -21,8 +25,15 @@ public class ViewClassicTest extends TestFxBase {
 		clickOn("#sector8");
 	}
 	@Test
-	public void ensureSelectedStationIdInListviewAppearOnTextFlied() {
-		Assert.assertTrue(false);
+	public void surchTextFliedStationID() {
+		
+		stationIdTextField = find("#stationIdTextField");
+		dateTextField = find("#dateTextField");
+		targetTextField = find("#targetTextField");
+		actualTextField = find("#actualTextField");
+		varianceTextField = find("#varianceTextField");
+		//stationListView = find("#stationListView");
+		
 	}
 	
 }

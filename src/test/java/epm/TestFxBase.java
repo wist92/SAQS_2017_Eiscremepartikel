@@ -8,14 +8,23 @@ import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
 import javafx.scene.Node;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 
 public abstract class TestFxBase extends ApplicationTest {
+	
+	TextField stationIdTextField;
+	TextField dateTextField;
+	TextField targetTextField;
+	TextField actualTextField;
+	TextField varianceTextField;
+	TextField stationListView;
 
 	@Before
 	public void setUp() throws Exception {
+			
 		ApplicationTest.launch(MainClassic.class);
 	}
 	
@@ -32,7 +41,9 @@ public abstract class TestFxBase extends ApplicationTest {
 	}
 	
 	/* Helper method to retrieve java Fx GUI component*/
+	@SuppressWarnings("unchecked")
 	public <T extends Node> T find(final String query) {
 		return (T) lookup(query).queryAll().iterator().next();
 	}
+	
 }
