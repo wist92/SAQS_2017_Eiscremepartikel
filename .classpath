@@ -32,5 +32,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="F:/Projekt/projekt2017/jar/testfx-core-4.0.0-20150226.214553-8-javadoc.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
