@@ -1,7 +1,11 @@
 package epm;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.testfx.api.FxRobotException;
+
+import de.saxsys.mvvmfx.utils.itemlist.SelectableItemList;
+import de.saxsys.mvvmfx.utils.itemlist.SelectableStringList;
 
 public class ViewClassicTest extends TestFxBase {
 
@@ -16,9 +20,9 @@ public class ViewClassicTest extends TestFxBase {
 	public void clickOnBogusElement() {
 		clickOn("#sector8");
 	}
-	
+	@Test
 	public void ensureSelectedStationIdInListviewAppearOnTextFlied() {
-		
+		Assert.assertTrue(false);
 	}
 	
 }
